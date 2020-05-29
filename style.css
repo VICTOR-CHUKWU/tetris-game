@@ -1,0 +1,73 @@
+body{
+    background-color: salmon;
+
+}
+
+.sc-box {
+    width: calc(100% - 130px);
+    text-align: center;
+}
+
+h2{
+    color: black;
+    display: inline-block;
+    border: 1px dotted #3432b8;
+    width: 150px;
+    background: #dedede;
+}
+
+.go {
+    display: none;
+    position: fixed;
+    align-self: center;
+    margin-left: -64px;
+    font-size: 23px;
+    color: red;
+    background: black;
+    padding: 5px 15px;
+}
+
+#start-button{
+    background-color: darkgreen;
+    width: 110px;
+    color: white;
+    outline: 0;
+    padding: 5px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid white;
+}
+.container{
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+}
+.grid{
+    border: 8px groove brown;
+    width: 200px;
+    height: 400px;
+    background-color: #dedede;
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid div{
+    width: 20px;
+    height: 20px;
+}
+.tetromino{
+    background: repeating-linear-gradient(45deg, #0e0e0e, #c1484803 100px);
+}
+
+.mini-grid{
+    margin-left: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mini-grid div{
+    width: 20px;
+    height: 20px;
+}
