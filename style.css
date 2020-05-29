@@ -1,6 +1,6 @@
 body{
     background-color: salmon;
-
+    min-width: 360px;
 }
 
 .sc-box {
@@ -61,7 +61,7 @@ h2{
 }
 
 .mini-grid{
-    margin-left: 50px;
+    margin-left: 20px;
     width: 80px;
     height: 80px;
     display: flex;
@@ -70,4 +70,37 @@ h2{
 .mini-grid div{
     width: 20px;
     height: 20px;
+}
+.side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.arr-cont {
+    padding: 3rem 0;
+    position: relative;
+}
+.arr-cont button {
+    width: 30px;
+    height: 27px;
+}
+.down {
+    position: absolute;
+    bottom: 6px;
+    left: 36px;
+}
+.up {
+    position: absolute;
+    top: 9px;
+    left: 36px;
+}
+.right {
+    position: absolute;
+    right: 5px;
+    top: 36px;
+}
+.left {
+    position: absolute;
+    left: 6px;
+    top: 36px;
 }

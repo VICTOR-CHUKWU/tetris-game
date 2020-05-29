@@ -87,6 +87,20 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
     }
 
+    function setTouchKeys () {
+        document.querySelector('.up').addEventListener('click', rotate);
+        document.querySelector('.down').addEventListener('click', moveDown);
+        document.querySelector('.right').addEventListener('click', moveRight);
+        document.querySelector('.left').addEventListener('click', moveLeft);
+    }
+
+    function disableTouchKeys () {
+        document.querySelector('.up').removeEventListener('click', rotate);
+        document.querySelector('.down').removeEventListener('click', moveDown);
+        document.querySelector('.right').removeEventListener('click', moveRight);
+        document.querySelector('.left').removeEventListener('click', moveLeft);
+    }
+
     //move down function
     function moveDown(){
         freeze();
@@ -210,6 +224,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
            clearInterval(timerId);
            timerId = null;
            document.removeEventListener('keydown', control)
+           disableTouchKeys()
        }else{
            if (random === null) { 
                random = nextRandom;
@@ -219,6 +234,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
            draw();
            timerId = setInterval(moveDown,speed);
            document.addEventListener('keydown', control)
+           setTouchKeys()
        }
        pause();
     })
@@ -280,6 +296,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             clearInterval(timerId);
             timerId = null;
             document.removeEventListener('keydown', control);
+            disableTouchKeys();
             gameEnd = true;
             document.getElementById('start-button').innerHTML="Restart";
             document.querySelector('.go').style.display = 'block';
